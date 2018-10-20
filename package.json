@@ -2,7 +2,12 @@
   "name": "learning-typescript-erickwendel",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "nodemon": "nodemon",
+    "build": "tsc",
+    "start": "node ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ErickWendel/Learning.NodeJSWithTypescript.git"
