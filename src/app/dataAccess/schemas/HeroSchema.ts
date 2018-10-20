@@ -1,30 +1,30 @@
-import DataAccess = require("./../../dataAccess/DataAccess");
-import IHeroModel = require("./../../model/interfaces/HeroModel");
+import DataAccess = require('./../../dataAccess/DataAccess');
+import IHeroModel = require('./../../model/interfaces/HeroModel');
 
-var mongoose = DataAccess.mongooseInstance;
-var mongooseConnection = DataAccess.mongooseConnection;
+const mongoose = DataAccess.mongooseInstance;
+const mongooseConnection = DataAccess.mongooseConnection;
 
 class HeroSchema {
-   
-  static get schema () {
-       var schema =  mongoose.Schema({
+
+  static get schema() {
+       const schema =  mongoose.Schema({
            name : {
                type: String,
-               required: true
+               required: true,
            },
            power: {
                type: String,
-               required: true
+               required: true,
            },
            amountPeopleSaved: {
                type: Number,
-               required: true
-           }
+               required: true,
+           },
        });
-       
+
        return schema;
    }
-   
+
 }
-var schema = mongooseConnection.model<IHeroModel>("Heroes", HeroSchema.schema);
+const schema = mongooseConnection.model<IHeroModel>('Heroes', HeroSchema.schema);
 export = schema;

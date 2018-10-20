@@ -1,4 +1,4 @@
-import mongoose = require("mongoose");
+import mongoose = require('mongoose');
 
 interface SpartanModel extends mongoose.Document {
   folk: string;

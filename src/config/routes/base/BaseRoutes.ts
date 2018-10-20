@@ -1,12 +1,12 @@
-import express = require("express");
-import HeroRoutes = require("./../HeroRoutes");
-import SpartanRoutes = require("./../SpartanRoutes");
-var app = express();
+import express = require('express');
+import HeroRoutes = require('./../HeroRoutes');
+import SpartanRoutes = require('./../SpartanRoutes');
+const app = express();
 class BaseRoutes {
-    
+
     get routes() {
-        app.use("/", new HeroRoutes().routes);
-        app.use("/", new SpartanRoutes().routes);
+        app.use('/', new HeroRoutes().routes);
+        app.use('/', new SpartanRoutes().routes);
         return app;
     }
 }

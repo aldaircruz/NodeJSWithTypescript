@@ -1,29 +1,29 @@
-import DataAccess = require("./../../dataAccess/DataAccess");
-import ISpartanModel = require("./../../model/interfaces/SpartanModel");
+import DataAccess = require('./../../dataAccess/DataAccess');
+import ISpartanModel = require('./../../model/interfaces/SpartanModel');
 
-var mongoose = DataAccess.mongooseInstance;
-var mongooseConnection = DataAccess.mongooseConnection;
+const mongoose = DataAccess.mongooseInstance;
+const mongooseConnection = DataAccess.mongooseConnection;
 
 class SpartanSchema {
-    
+
     static get schema() {
-        var schema = new mongoose.Schema({
+        const schema = new mongoose.Schema({
            name: {
                type: String,
-               required: true
+               required: true,
            },
            folk: {
                type: String,
-               required: true
+               required: true,
            },
            amountPeopleKilled: {
                type: Number,
-               required: true
-           } 
+               required: true,
+           },
         });
-        
+
         return schema;
     }
 }
-var schema = mongooseConnection.model<ISpartanModel>("Spartan", SpartanSchema.schema);
+const schema = mongooseConnection.model<ISpartanModel>('Spartan', SpartanSchema.schema);
 export = schema;

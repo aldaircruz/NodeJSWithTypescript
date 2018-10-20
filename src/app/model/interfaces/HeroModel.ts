@@ -1,5 +1,5 @@
 
-import mongoose = require("mongoose");
+import mongoose = require('mongoose');
 
 interface HeroModel extends mongoose.Document {
   power: string;
