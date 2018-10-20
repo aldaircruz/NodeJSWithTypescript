@@ -7,24 +7,21 @@ const mongooseConnection = DataAccess.mongooseConnection;
 class HeroSchema {
 
   static get schema() {
-       const schema =  mongoose.Schema({
-           name : {
-               type: String,
+       return mongoose.Schema({
+           amountPeopleSaved: {
                required: true,
+               type: Number,
+           },
+           name : {
+               required: true,
+               type: String,
            },
            power: {
+               required: true,
                type: String,
-               required: true,
-           },
-           amountPeopleSaved: {
-               type: Number,
-               required: true,
            },
        });
-
-       return schema;
    }
 
 }
-const schema = mongooseConnection.model<IHeroModel>('Heroes', HeroSchema.schema);
-export = schema;
+export = mongooseConnection.model<IHeroModel>('Heroes', HeroSchema.schema);

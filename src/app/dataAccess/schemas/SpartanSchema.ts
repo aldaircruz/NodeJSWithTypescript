@@ -7,23 +7,20 @@ const mongooseConnection = DataAccess.mongooseConnection;
 class SpartanSchema {
 
     static get schema() {
-        const schema = new mongoose.Schema({
-           name: {
-               type: String,
-               required: true,
-           },
-           folk: {
-               type: String,
-               required: true,
-           },
-           amountPeopleKilled: {
-               type: Number,
-               required: true,
-           },
+        return new mongoose.Schema({
+            amountPeopleKilled: {
+                required: true,
+                type: Number,
+            },
+            folk: {
+                required: true,
+                type: String,
+            },
+            name: {
+                required: true,
+                type: String,
+            },
         });
-
-        return schema;
     }
 }
-const schema = mongooseConnection.model<ISpartanModel>('Spartan', SpartanSchema.schema);
-export = schema;
+export = mongooseConnection.model<ISpartanModel>('Spartan', SpartanSchema.schema);

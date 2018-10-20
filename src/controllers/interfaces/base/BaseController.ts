@@ -1,7 +1,7 @@
 import IBaseBusiness = require('../../../app/business/interfaces/base/BaseBusiness');
 import IReadController = require('./../common/ReadController');
 import IWriteController = require('./../common/WriteController');
-interface BaseController<T extends IBaseBusiness<Object>> extends IReadController, IWriteController {
+interface IBaseController<T extends IBaseBusiness<object>> extends IReadController, IWriteController {
 
 }
-export = BaseController;
+export = IBaseController;

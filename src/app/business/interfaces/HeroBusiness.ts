@@ -1,8 +1,8 @@
 
 import IHeroModel = require('./../../model/interfaces/HeroModel');
-import BaseBusiness = require('./base/BaseBusiness');
+import IBaseBusiness = require('./base/BaseBusiness');
 
-interface HeroBusiness extends BaseBusiness<IHeroModel> {
+interface IHeroBusiness extends IBaseBusiness<IHeroModel> {
 
 }
-export = HeroBusiness;
+export = IHeroBusiness;

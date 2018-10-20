@@ -1,7 +1,7 @@
 import ISpartanModel = require('./../../model/interfaces/SpartanModel');
-import BaseBusiness = require('./base/BaseBusiness');
+import IBaseBusiness = require('./base/BaseBusiness');
 
-interface SpartanBusiness extends BaseBusiness<ISpartanModel> {
+interface ISpartanBusiness extends IBaseBusiness<ISpartanModel> {
 
 }
-export = SpartanBusiness;
+export = ISpartanBusiness;

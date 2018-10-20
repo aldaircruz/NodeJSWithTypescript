@@ -3,13 +3,13 @@ import HeroController = require('./../../controllers/HeroController');
 
 const router = express.Router();
 class HeroRoutes {
-    private _heroController: HeroController;
+    private heroController: HeroController;
 
     constructor() {
-        this._heroController = new HeroController();
+        this.heroController = new HeroController();
     }
     get routes() {
-        const controller = this._heroController;
+        const controller = this.heroController;
         router.get('/heroes', controller.retrieve);
         router.post('/heroes', controller.create);
         router.put('/heroes/:_id', controller.update);

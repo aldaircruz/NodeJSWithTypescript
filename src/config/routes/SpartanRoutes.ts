@@ -3,14 +3,14 @@ import SpartanController = require('./../../controllers/SpartanController');
 
 const router = express.Router();
 class SpartanRoutes {
-    private _spartanController: SpartanController;
+    private spartanController: SpartanController;
 
     constructor() {
-        this._spartanController = new SpartanController();
+        this.spartanController = new SpartanController();
     }
     get routes(): express.Router {
 
-        const controller = this._spartanController;
+        const controller = this.spartanController;
         router.get('/spartans', controller.retrieve);
         router.post('/spartans', controller.create);
         router.put('/spartans/:_id', controller.update);

@@ -2,21 +2,21 @@ import IHeroModel = require('./interfaces/HeroModel');
 
 class HeroModel {
 
-   private _heroModel: IHeroModel;
+   private heroModel: IHeroModel;
 
    constructor(heroModel: IHeroModel) {
-       this._heroModel = heroModel;
+       this.heroModel = heroModel;
    }
    get name(): string {
-       return this._heroModel.name;
+       return this.heroModel.name;
    }
 
    get power(): string {
-       return this._heroModel.power;
+       return this.heroModel.power;
    }
 
    get amountPeopleSaved(): number {
-       return this._heroModel.amountPeopleSaved;
+       return this.heroModel.amountPeopleSaved;
    }
 
 }
