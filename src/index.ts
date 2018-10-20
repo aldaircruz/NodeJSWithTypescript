@@ -1,4 +1,3 @@
-    /// <reference path="../typings/tsd.d.ts" />
 
     import express = require("express");
     import Middlewares = require("./config/middlewares/base/MiddlewaresBase");

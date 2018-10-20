@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/ErickWendel/Learning.NodeJSWithTypescript#readme",
   "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/method-override": "0.0.31",
+    "@types/mongoose": "^4.7.39",
+    "@types/node": "^8.10.36",
     "body-parser": "^1.14.2",
     "clear": "0.0.1",
     "connect": "^3.4.0",

@@ -1,5 +1,3 @@
-   /// <reference path="../../../../typings/tsd.d.ts" />
-
 import IRead = require("./../interfaces/base/Read");
 import IWrite = require("./../interfaces/base/Write");
 import IHeroModel = require("./../../model/interfaces/HeroModel");

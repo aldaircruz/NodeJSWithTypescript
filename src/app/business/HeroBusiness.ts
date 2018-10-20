@@ -1,4 +1,3 @@
-/// <reference path="../../../typings/tsd.d.ts" />
 import HeroRepository = require("./../repository/HeroRepository");
 import IHeroBusiness = require("./interfaces/HeroBusiness");
 import IHeroModel = require("./../model/interfaces/HeroModel");
