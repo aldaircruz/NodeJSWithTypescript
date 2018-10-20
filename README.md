@@ -13,8 +13,6 @@ Tools:
 - ExpressJS
 - MongoDB
 - Mongoose
-- GulpJS
-- VSCode Task Runners
 
 Convention Refs: <br />
    <a href="https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines" target="_blank"> Coding guidelines Typescript - Microsoft</a> 
