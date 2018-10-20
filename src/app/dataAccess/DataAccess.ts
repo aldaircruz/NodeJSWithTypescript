@@ -1,5 +1,4 @@
 import Mongoose = require("mongoose");
-    import Constants = require("./../../config/constants/Constants");
 
 class DataAccess {
     static mongooseInstance: any;
@@ -17,7 +16,7 @@ class DataAccess {
             console.log("Conectado ao mongodb.");
         });
 
-           this.mongooseInstance = Mongoose.connect(Constants.DB_CONNECTION_STRING);
+        this.mongooseInstance = Mongoose.connect(process.env.DB_CONNECTION_STRING || '');
         return this.mongooseInstance;
     }
 
