@@ -1,7 +1,7 @@
 import express = require('express');
-interface ReadController {
+interface IReadController {
     retrieve: express.RequestHandler;
     findById: express.RequestHandler;
 
 }
-export = ReadController;
+export = IReadController;
